@@ -1,0 +1,9 @@
+<%- include('header') -%>
+<h1>This is Home</h1>
+<p>Navbar navigation links build on our .nav options with their own modifier class and require the use of toggler classes for proper responsive styling. Navigation in navbars will also grow to occupy as much horizontal space as possible to keep your navbar contents securely aligned.</p>
+<% console.log(posts) %>
+<% posts.forEach(function(mine){ %>
+    <h1><%= mine.title %></h1>
+    <p><%= mine.essay.substring(0,100)+'...' %> <a href="/posts/<%= mine.title.toLowerCase() %>">Learn more</a> </p>
+<% }) %>
+<%- include('footer') -%>
